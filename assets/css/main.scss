@@ -1,0 +1,408 @@
+/*
+|------------------------------------------
+|
+|
+| Mixin Media Queries
+|
+|
+|
+|------------------------------------------
+*/
+@mixin for-576 {
+    @media (min-width: 576px) { @content; }
+  }
+  @mixin for-768 {
+    @media (min-width: 768px) { @content; }
+  }
+  @mixin for-992 {
+    @media (min-width: 992px) { @content; }
+  }
+  @mixin for-1200 {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-1800 {
+    @media (min-width: 1800px) { @content; }
+  }
+
+
+
+/*
+|------------------------------------------
+|  Typography and color Variables
+|------------------------------------------
+*/
+$neon-teal: #00FFFF;
+$blue: #099FFF;
+$neon-forest-green: #00FF66;
+$neon-green: #33FF00;
+$neon-pink: #FF00CC;
+$neon-purple: #9d00FF;
+$neon-violet: #6E0DD0;
+$black: #000000;
+$white: #ffffff;
+$heading-text: 'Julius Sans One', sans-serif;
+$text: 'Archivo Narrow', sans-serif;
+
+/*
+|------------------------------------------
+|  temp loadout
+|------------------------------------------
+*/
+
+.temp-img {
+    border: 1px solid #ffffff;
+    height: 220px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    @include for-576 {    
+            width: 300px;
+            height: 250px;
+     }
+     @include for-768 {    
+        width: 400px;
+        height: 300px;
+ }
+    @include for-992 {    
+        width: 500px;
+        height: 370px;
+    }
+    @include for-1200 {    
+        width: 650px;
+        height: 480px;
+    }
+
+}
+
+
+/*
+|------------------------------------------
+|  global
+|------------------------------------------
+*/
+
+body {
+    font-family: $text;
+    background-color: $black; 
+    color: $white;
+}
+
+.is-flex {
+    display: flex;
+}
+
+.is-relative {
+    position: relative;
+}
+
+.is-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.is-txt-center{
+    text-align: center;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.container {
+    padding: 10px;
+    width: 100%;
+    @include for-576 {    
+            padding: 40px;
+     }
+}
+
+/*
+|------------------------------------------
+|  typography
+|------------------------------------------
+*/
+a {
+    text-decoration: none;
+}
+
+h1,
+h2  {
+    font-family: $heading-text;
+}
+
+.header-txt {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/*
+|------------------------------------------
+|  button
+|------------------------------------------
+*/
+
+.btn {
+    color: $white;
+    border: 1px solid $white;
+    padding: 10px;
+    @include for-768 {    
+        font-size: 1.3rem;
+ }
+}
+
+/*
+|------------------------------------------
+|  Landing Screen
+|------------------------------------------
+*/
+
+.landing-screen {
+    height: 100vh;
+    width: 100vw;
+    color: $white;
+
+    .hero-content {
+        line-height: 1.5;
+        top: 55%;
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            @include for-768 {    
+                font-size: 2.2rem;
+         }
+        }
+        h2 {
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+            @include for-768 {    
+                font-size: 2.8rem;
+         }
+        }
+        .arrow-wrap {
+            margin-top: 3rem;
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid $white;
+        }
+        .arrow-down {
+            border: solid $white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 10px;
+            transform: rotate(45deg);
+            margin-top: 35px;
+            position: relative;
+        }
+        .arrow-down::before,
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background-color: $white;
+            transform: rotate(-45deg);
+        }
+        .arrow-down::after {
+            right: 11px;
+            top: 0px;
+        }
+        .arrow-down::before {
+            right: 26px;
+            top: -15px;
+        }
+    }
+
+}
+
+/*
+|------------------------------------------
+|  Mission
+|------------------------------------------
+*/
+
+.mission {
+    padding-top: 50px;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    p {
+        font-size: 1.3rem;
+        margin-bottom: 1em;
+        line-height: 1.5;
+    }
+}
+
+/*
+|------------------------------------------
+|  Featured Work
+|------------------------------------------
+*/
+
+.featured-work {
+    padding-top: 50px;
+    .feature-cards{
+        padding: 25px;
+        .left{
+            h4 {
+                font-size: 1.3rem;
+            }
+            h3{
+                font-size: 2rem;
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
+            p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 40px;
+            }
+            .btn {
+                margin: 20px 0;
+            }
+        }
+
+    }
+}
+
+/*
+|------------------------------------------
+|  Grid
+|------------------------------------------
+*/
+.col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+}
+
+.col-10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+}
+
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.col-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+}
+
+.col-7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+}
+
+.col-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+}
+
+.col-2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+}
+
+.col-1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+}
+
+
+/*
+|------------------------------------------
+|
+|
+|
+|  Media Queries
+|
+|
+|
+|------------------------------------------
+*/
+
+
+@media (min-width: 576px) {
+
+
+}
+
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+/*
+|------------------------------------------
+|  temp loadout 992
+|------------------------------------------
+*/
+
+    .col-md-2 {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+
+    .col-md-10 {
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%;
+    }
+
+    .is-md-flex {
+        display: flex;
+    }
+
+    .feature-cards{
+        .left {
+            margin-top: 60px;
+        }
+
+        .temp-img {
+            width: 500px;
+            height: 370px;
+        }
+    }
+
+
+
+
+
+}
+
+@media (min-width: 1200px) {
+/*
+|------------------------------------------
+|  temp loadout 1200
+|------------------------------------------
+*/
+
+    .feature-cards {
+
+    }
+    .temp-img {
+        width: 650px;
+        height: 480px;
+    }
+
+}
