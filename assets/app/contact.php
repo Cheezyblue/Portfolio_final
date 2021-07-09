@@ -12,17 +12,15 @@
     $user_message = $_POST['visitor_message'];
 
 
-
     // once all the checks are in and if there aren't any problems we will create a new user
     // Insert the information into the users table values email and password
     $sql = "INSERT INTO contact_info (email, title, user_message, username) VALUES (?, ? ,?, ?)";
     //preparing a new sql statement
     $stmt = $connection->prepare($sql);
 
-    // password_hash will create an encrypted information that is unique to the password
-    // this allows the password to be secured
+    // binding the parameters to the values above
     $stmt->bind_param("ssss", $user_email, $title, $user_message, $user_name);
     $stmt->execute();
 
     //redirect back to the sign-up with the new_user check
-    header("Location: " . SITE_URL . "?msg=new_user&type=sucess");
+    header("Location: " . SITE_URL . "?type=success");

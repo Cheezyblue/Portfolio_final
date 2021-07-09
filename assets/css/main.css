@@ -109,15 +109,8 @@ h2 {
     .header-txt {
       font-size: 2.5rem; } }
 
-.neonText {
-  color: #fff;
-  text-shadow: 0 0 30px #fff,  0 0 16px #fff,  0 0 4px #fff,  0 0 43px #00ffff,  0 0 45px #00ffff,  0 0 84px #00ffff,  0 0 110px #00ffff, 0 0 130px #00ffff; }
-
-.neon-shadow {
-  box-shadow: 0 0 12px #fff, 0 0 16px #fff, 0 0 54px #fff, 0 0 43px #099FFF, 0 0 48px #099FFF, 0 0 27px #099FFF, 0 0 16px #099FFF, 0 0 65px #099FFF; }
-
 .neon-arrow-shadow {
-  box-shadow: 0 0 3px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 5px #099FFF, 0 0 7px #099FFF, 0 0 10px #099FFF, 0 0 18px #099FFF, 0 0 25px #099FFF; }
+  box-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 3px #ffffff, 0 0 6px #ff1818, 0 0 7px #ff1818, 0 0 10px #ff1818, 0 0 14px #ff1818, 0 0 20px #ff1818; }
 
 /*
 |------------------------------------------
@@ -147,6 +140,12 @@ h2 {
     .landing-screen .hero-content h1 {
       font-size: 1.5rem;
       margin-bottom: 1.5rem; }
+      .landing-screen .hero-content h1 .vancouver {
+        color: #ffffff;
+        text-shadow: 0 0 1.5px #ffffff, 0 0 3px #ffffff, 0 0 4.5px #ffffff, 0 0 9px #ff1818, 0 0 10.5px #ff1818, 0 0 15px #ff1818, 0 0 21px #ff1818, 0 0 30px #ff1818;
+        animation: flicker 5s linear;
+        animation-iteration-count: 5;
+        animation-delay: 0.4s; }
       @media (min-width: 768px) {
         .landing-screen .hero-content h1 {
           font-size: 2.2rem; } }
@@ -165,7 +164,9 @@ h2 {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 2px solid #ffffff; }
+      border: 2px solid #ffffff;
+      animation: bounce 5.6s infinite;
+      animation-timing-function: ease; }
       @media (min-width: 768px) {
         .landing-screen .hero-content .arrow-wrap {
           width: 110px;
@@ -177,7 +178,8 @@ h2 {
       display: inline-block;
       margin-top: 35px;
       position: relative;
-      box-shadow: 0 0 3px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 5px #099FFF, 0 0 7px #099FFF, 0 0 10px #099FFF, 0 0 18px #099FFF, 0 0 25px #099FFF; }
+      animation: flicker 3s linear infinite;
+      box-shadow: 0 0 1.5px #ffffff, 0 0 3px #ffffff, 0 0 4.5px #ffffff, 0 0 9px #ff1818, 0 0 10.5px #ff1818, 0 0 15px #ff1818, 0 0 21px #ff1818, 0 0 30px #ff1818; }
       @media (min-width: 768px) {
         .landing-screen .hero-content .arrow {
           height: 25px; } }
@@ -205,7 +207,7 @@ h2 {
       width: 3px;
       height: 15px;
       transform: rotate(45deg);
-      box-shadow: 0 0 3px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 5px #099FFF, 0 0 7px #099FFF, 0 0 10px #099FFF, 0 0 18px #099FFF, 0 0 25px #099FFF; }
+      box-shadow: 0 0 1.5px #ffffff, 0 0 3px #ffffff, 0 0 4.5px #ffffff, 0 0 9px #ff1818, 0 0 10.5px #ff1818, 0 0 15px #ff1818, 0 0 21px #ff1818, 0 0 30px #ff1818; }
       @media (min-width: 768px) {
         .landing-screen .hero-content .arrow-left::before,
         .landing-screen .hero-content .arrow-left::after {
@@ -215,14 +217,14 @@ h2 {
       top: -20px; }
       @media (min-width: 768px) {
         .landing-screen .hero-content .arrow-left::after {
-          right: -19px;
+          right: -21px;
           top: -9px; } }
     .landing-screen .hero-content .arrow-left::before {
       right: -13px;
       top: -7px; }
       @media (min-width: 768px) {
         .landing-screen .hero-content .arrow-left::before {
-          right: -42px;
+          right: -44px;
           top: -32px; } }
 
 /*
@@ -237,8 +239,13 @@ h2 {
       text-align: center;
       padding-top: 60px;
       padding-bottom: 60px; } }
+  .mission .container {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 30px #099FFF, 0 0 35px #099FFF, 0 0 50px #099FFF, 0 0 70px #099FFF, 0 0 100px #099FFF; }
   .mission h2 {
-    margin-top: 30px; }
+    margin-top: 30px;
+    animation: flicker 6s linear infinite;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 30px #099FFF, 0 0 35px #099FFF, 0 0 50px #099FFF, 0 0 70px #099FFF, 0 0 100px #099FFF; }
   .mission p {
     font-size: 1.3rem;
     margin-bottom: 1em;
@@ -262,7 +269,7 @@ h2 {
     @media (min-width: 992px) {
       .featured-work .feature-cards .card-content {
         margin-top: 40px;
-        padding: 20px; } }
+        padding: 20px 20px 20px 0; } }
     .featured-work .feature-cards .card-content h4 {
       font-size: 1.3rem; }
       @media (min-width: 576px) {
@@ -398,5 +405,35 @@ h2 {
 
   .is-md-flex {
     display: flex; } }
+/*
+|------------------------------------------
+|
+|
+|
+| Animations
+|
+|
+|
+|------------------------------------------
+*/
+@keyframes blinking {
+  0% {
+    opacity: 100%; }
+  50% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+@keyframes bounce {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-50px); }
+  100% {
+    transform: translateY(0); } }
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99; }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.1; } }
 
 /*# sourceMappingURL=main.css.map */

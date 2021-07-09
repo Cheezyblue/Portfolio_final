@@ -5,12 +5,32 @@
         <meta name="portfolio" content="all">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
         <meta name="description" content="Frank Nguyen is a new media web developer residing in Surrey, BC, Canada.">
-         <meta name ="author" content="Frank Nguyen">
+        <meta name ="author" content="Frank Nguyen">
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@cheezyassassin">
+        <meta name="twitter:title" content="Frank Nguyen | Web Developer">
+        <meta property="twitter:url" content="https://frank-nguyen.ca/"/>
+        <meta name="twitter:description" content="Frank Nguyen is a new media web developer residing in Surrey, BC, Canada.">
+
+        <meta name="twitter:image:src" content="https://frank-nguyen.ca/assets/images/open_graph_images/facebook_og_image.png"/>
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Frank Nguyen | Web Developer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://frank-nguyen.ca/" />
+        <meta property="og:image" content="https://frank-nguyen.ca/assets/images/open_graph_images/facebook_og_image.png" />
+        <meta property="og:tag" content="https://frank-nguyen.ca/assets/images/open_graph_images/facebook_og_image.png" />
+        <meta property="og:description" content="Frank Nguyen is a new media web developer residing in Surrey, BC, Canada."/>
+        <meta property="og:site_name" content="Frank Nguyen Portfolio" />
+
         <title>Web Developer | Frank Nguyen</title>
         <?php require("assets/partials/favicons.php"); ?>
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Julius+Sans+One&display=swap">
         <link rel="stylesheet" href="assets/css/main.css">
+        
     </head>
     <body>
         <header class="header">
@@ -25,7 +45,7 @@
                 </div>
                 <div class="hero-content is-center container">
                     <h2>Nice to meet ya, i'm Frank</h2>
-                    <h1>I'm a web developer based in Vancouver, Canada</h1>
+                    <h1>I'm a web developer based in <span class="vancouver">Vancouver, Canada</span></h1>
                     <a class="btn" href="#" title="About Author">Learn More</a>
                     <div class="arrow-wrap m-auto neon-arrow-shadow">
                         <div class="arrow arrow-left"></div>
@@ -34,8 +54,8 @@
                 </div>
             </section>
             <section class="mission">
-                <div class="container neon-shadow">
-                    <h2 class="header-txt neonText">MISSION</h2>
+                <div class="container">
+                    <h2 class="header-txt aria-required="true" required">MISSION</h2>
                     <p>The internet is a wonderful intangible place that allows anyone to connect and interact with each other. It is a treasure cove of wonder, people, and experience like no other.</p>
                     <p>With the world rapidly evolving and becoming more digitally connected, making sure no one is left behind in enjoying the culture of the internet. This means ensuring that the internet is accessible to everyone.</p>
                     <p>My mission is to be able to increase human connection in a world going digital. The more people we can connect, the more people who can enjoy and expand this endless frontier. Let's grow this space together!</p>
@@ -86,19 +106,19 @@
             <form class="contact-form" action="assets/app/contact.php" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" required>
+                    <input type="text" id="name" name="visitor_name" placeholder="John Doe" aria-required="true" autocomplete="nope" required >
                 </div>
                 <div class="form-group">
                     <label for="email">Your E-mail</label>
-                    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+                    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" aria-required="true" autocomplete="nope" required>
                 </div>
                 <div class="form-group">
                     <label for="title">What's the topic of today about?</label>
-                    <input type="text" id="title" name="email_title" required placeholder="Portfolio Site Inquiry">
+                    <input type="text" id="title" name="email_title" placeholder="Portfolio Site Inquiry" aria-required="true" autocomplete="nope" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Write your message</label>
-                    <textarea id="message" name="visitor_message" placeholder="Type what's on your mind here!" required></textarea>
+                    <textarea id="message" name="visitor_message" placeholder="Type what's on your mind here!" aria-required="true" autocomplete="nope" required></textarea>
                 </div>
                 <button type="submit">Send Message</button>
             </form>
